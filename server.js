@@ -1,31 +1,31 @@
 var express = require('express');
 var app = express();
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + ''));
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
 var bodyParser = require('body-parser')
 var path = require('path');
 
-var PR2    = require('./public/script/PR2.js').PR2;
-var Pusher = require('./public/script/Pusher_Socket.js').Pusher;
+var PR2    = require('./script/PR2.js').PR2;
+var Pusher = require('./script/Pusher_Socket.js').Pusher;
 
-var setup  = require('./public/script/setup.js').setup;
-var config = require('./public/script/config').config;
+var setup  = require('./script/setup.js').setup;
+var config = require('./script/config').config;
 
-var camplayer  = require('./public/script/PR2_modules/camplayer.js').camplayer;
-var utils      = require('./public/script/PR2_modules/utils.js').utils;
-var chatbox    = require('./public/script/PR2_modules/chatbox.js').chatbox;
-var download   = require('./public/script/PR2_modules/download.js').download;
-var fullscreen = require('./public/script/PR2_modules/fullscreen.js').fullscreen;
-var modals     = require('./public/script/PR2_modules/modals.js').modals;
-var peer       = require('./public/script/PR2_modules/peer.js').peer;
-var shapes     = require('./public/script/PR2_modules/shapes.js').shapes;
-var shortcuts  = require('./public/script/PR2_modules/shortcuts.js').shortcuts;
-var toolbar    = require('./public/script/PR2_modules/toolbar.js').toolbar;
-var upload     = require('./public/script/PR2_modules/upload.js').upload;
-var user       = require('./public/script/PR2_modules/user.js').user;
-var whiteboard = require('./public/script/PR2_modules/whiteboard.js').whiteboard;
+var camplayer  = require('./script/PR2_modules/camplayer.js').camplayer;
+var utils      = require('./script/PR2_modules/utils.js').utils;
+var chatbox    = require('./script/PR2_modules/chatbox.js').chatbox;
+var download   = require('./script/PR2_modules/download.js').download;
+var fullscreen = require('./script/PR2_modules/fullscreen.js').fullscreen;
+var modals     = require('./script/PR2_modules/modals.js').modals;
+var peer       = require('./script/PR2_modules/peer.js').peer;
+var shapes     = require('./script/PR2_modules/shapes.js').shapes;
+var shortcuts  = require('./script/PR2_modules/shortcuts.js').shortcuts;
+var toolbar    = require('./script/PR2_modules/toolbar.js').toolbar;
+var upload     = require('./script/PR2_modules/upload.js').upload;
+var user       = require('./script/PR2_modules/user.js').user;
+var whiteboard = require('./script/PR2_modules/whiteboard.js').whiteboard;
 
 
 //app.use(bodyParser.urlencoded({ extended: false }));
